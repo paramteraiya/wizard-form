@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta viewport="width=device-width, initial-scale=1">
+        <title>Wizard Form || task-6</title>
+        <link rel="stylesheet" href="./css/styles.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.css">
+        <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.js"></script>
+        <script type="text/javascript" charset="utf8" src="./js/jquery.inputmask.js"></script>
+        <script src="./js/script.js" type="text/javascript"></script>
+      </head>
+    <body>
+      <div class="title">
+        <h1>WIZARD FORM</h1>
+      </div>
+        <div class="container">
+            <div class="tabs">
+              <button class="tabButton" id="one">STEP 1</button>
+              <button class="tabButton" id="two">STEP 2</button>
+              <button class="tabButton" id="three">STEP 3</button>
+              <button class="tabButton" id="four">STEP 4</button>
+            </div>
+            
+            <form action="">
+            <div class="content">
+              <div id="oneContent" class="tabContent">
+                <label for="firstName">First Name:</label>
+                <input type="text" id="firstName" placeholder="Enter First Name">
+                <span class="error_form" id="firstNameError"></span><br><br>
+                <label for="lasttName">Last Name:</label>
+                <input type="text" id="lastName" placeholder="Enter Last Name"><br><br>
+                <label for="gender" id="genderLabel">Gender:</label>
+                <input type="radio" class="radioInput" name="gender" id="female" value="female">
+                <label for="female">female</label>
+                <input type="radio" class="radioInput" name="gender" id="male" value="male">
+                <label for="male">male</label><br><br>
+                <a href="#" id="nextButton1">SAVE & NEXT</a>
+              </div>
+              <div id="twoContent" class="tabContent">
+                <label for="email">Email ID:</label>
+                <input type="email" id="email" placeholder="Enter Email ID:">
+                <span class="error_form" id="emailNameError"></span><br><br>
+                <label for="contact">Contact ID:</label>
+                <input type="text" id="contact" data-inputmask="'mask': '99-9999999999'"><br><br>
+                <label for="birthdate">Birthdate:</label>
+                <input type="text" id="DOB" data-inputmask="'mask': '99-99-9999'"><br><br>
+                <a href="#" id="prevButton1">PREVIOUS</a><br><br>
+                <a href="#" id="nextButton2">SAVE & NEXT</a>
+              </div>
+              <div id="threeContent" class="tabContent">
+                <label for="sports">Sports:</label>
+                <select name="sportsSelect" id="sports">
+                  <option value="football">football</option>
+                  <option value="cricket">cricket</option>
+                </select><br><br>
+                <label for="aboutYou">About Yourself:</label>
+                <input type="text" id="aboutYou" placeholder="Tell us something about Yourself"><br><br>
+                <input type="checkbox" id="agree" value="agree">
+                <label for="agree">"I agree to"
+                  <a href="#" id="terms">Terms & Conditions</a>
+                </label><br><br>
+                <a href="#" id="prevButton2">PREVIOUS</a><br><br>
+                <a href="#" id="nextButton3">SAVE & NEXT</a>
+              </div>
+              <div id="fourContent" class="tabContent">
+                <label for="hours">For How Many Hours?</label>
+                <input type="text"  id="hoursInput" data-inputmask="'mask': '99'"><br><br>
+                <label for="hours">Zip-code</label>
+                <input type="text" id="zipInput" data-inputmask="'mask': '999999'"><br><br>
+                <label for="hours">IP Address:</label>
+                <input type="text"  id="ipAddress" data-inputmask="'mask': '999.999.999.999'"><br><br>
+                <label for="money">Money:</label>
+                <input type="text"  id="money" data-inputmask="'mask': '#,##9'"><br><br>
+                <a href="#" id="prevButton3">PREVIOUS</a><br><br>
+                <a href="#" id="submitBtn" class="submitButton">SUBMIT</a>
+                <a href="#" id="updateBtn" class="updateButton" style="display:none">UPDATE</a><br><br>
+                <a href="#" id="cancelBtn" class="cancelButton" style="display:none">CANCEL</a>
+              </div>
+            </div>
+          </form>
+          <div class="tableMain">
+            <table class="tableData" id="tabledata">
+              <thead>
+              <tr>
+                <th>#</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Gender</th>
+                <th>Email</th>
+                <th>Contact No.</th>
+                <th>DOB</th>
+                <th>Sports</th>
+                <th>About Yourself</th>
+                <th>T & C</th>
+                <th>hours</th>
+                <th>Zip code</th>
+                <th>Money</th>
+                <th>IP address</th>
+                <th>Edit</th>
+                <th>Delete</th>
+              </tr>
+            </thead>
+            </table>     
+          </div>
+          </div>
+    </body>
+
+</html>
